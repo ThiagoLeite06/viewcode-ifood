@@ -27,7 +27,7 @@ class RegisterViewController: UIViewController {
         self.registerScreen?.passwordTextField.delegate = self
         self.registerScreen?.delegate(delegate: self)
         self.auth = Auth.auth()
-        self.alert = Alert()
+//        self.alert = Alert()
     }
     
 }
