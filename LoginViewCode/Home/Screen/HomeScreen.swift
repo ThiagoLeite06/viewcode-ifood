@@ -14,6 +14,7 @@ class HomeScreen: UIView {
         tbv.translatesAutoresizingMaskIntoConstraints = false
         tbv.backgroundColor = .white
         tbv.register(FoodDetailTableViewCell.self, forCellReuseIdentifier: FoodDetailTableViewCell.identifier)
+        tbv.register(CategoryTableViewCell.self, forCellReuseIdentifier: CategoryTableViewCell.identifier)
         return tbv
     }()
 

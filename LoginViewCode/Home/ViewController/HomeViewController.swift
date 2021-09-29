@@ -34,10 +34,16 @@ class HomeViewController: UIViewController  {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.data.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 2 {
+            let cell: CategoryTableViewCell? = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell
+            return cell ?? UITableViewCell()
+        }
+        
         let cell: FoodDetailTableViewCell? = tableView.dequeueReusableCell(withIdentifier: FoodDetailTableViewCell.identifier, for: indexPath) as? FoodDetailTableViewCell
         cell?.setUpCell(data: self.data[indexPath.row])
         
