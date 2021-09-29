@@ -17,6 +17,8 @@
 		AFDDC43B2703AEAE007CFA30 /* FoodDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDC43A2703AEAE007CFA30 /* FoodDetailTableViewCell.swift */; };
 		AFDDC43E2703B3FB007CFA30 /* DataFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDC43D2703B3FB007CFA30 /* DataFood.swift */; };
 		AFDDC4412704A5B8007CFA30 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDC4402704A5B8007CFA30 /* FoodDetailView.swift */; };
+		AFDDC4452704EDC9007CFA30 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDC4442704EDC9007CFA30 /* CategoryTableViewCell.swift */; };
+		AFDDC4482704F005007CFA30 /* CategoryTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDC4472704F005007CFA30 /* CategoryTableViewCellScreen.swift */; };
 		AFF465B626F0D1CA002C0C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF465B526F0D1CA002C0C93 /* AppDelegate.swift */; };
 		AFF465B826F0D1CA002C0C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF465B726F0D1CA002C0C93 /* SceneDelegate.swift */; };
 		AFF465BA26F0D1CA002C0C93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF465B926F0D1CA002C0C93 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		AFDDC43A2703AEAE007CFA30 /* FoodDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailTableViewCell.swift; sourceTree = "<group>"; };
 		AFDDC43D2703B3FB007CFA30 /* DataFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFood.swift; sourceTree = "<group>"; };
 		AFDDC4402704A5B8007CFA30 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
+		AFDDC4442704EDC9007CFA30 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		AFDDC4472704F005007CFA30 /* CategoryTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCellScreen.swift; sourceTree = "<group>"; };
 		AFF465B226F0D1CA002C0C93 /* LoginViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF465B526F0D1CA002C0C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF465B726F0D1CA002C0C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,8 +169,8 @@
 		AFDDC4392703AE7E007CFA30 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				AFDDC43F2704A580007CFA30 /* CustomView */,
-				AFDDC43A2703AEAE007CFA30 /* FoodDetailTableViewCell.swift */,
+				AFDDC4432704ED91007CFA30 /* CategoryTableViewCell */,
+				AFDDC4422704EC5D007CFA30 /* FoodDetailTableViewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -183,6 +187,32 @@
 			isa = PBXGroup;
 			children = (
 				AFDDC4402704A5B8007CFA30 /* FoodDetailView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		AFDDC4422704EC5D007CFA30 /* FoodDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AFDDC43F2704A580007CFA30 /* CustomView */,
+				AFDDC43A2703AEAE007CFA30 /* FoodDetailTableViewCell.swift */,
+			);
+			path = FoodDetailTableViewCell;
+			sourceTree = "<group>";
+		};
+		AFDDC4432704ED91007CFA30 /* CategoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AFDDC4462704EFC6007CFA30 /* CustomView */,
+				AFDDC4442704EDC9007CFA30 /* CategoryTableViewCell.swift */,
+			);
+			path = CategoryTableViewCell;
+			sourceTree = "<group>";
+		};
+		AFDDC4462704EFC6007CFA30 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				AFDDC4472704F005007CFA30 /* CategoryTableViewCellScreen.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -347,6 +377,8 @@
 				AFF465B626F0D1CA002C0C93 /* AppDelegate.swift in Sources */,
 				AFF465B826F0D1CA002C0C93 /* SceneDelegate.swift in Sources */,
 				AF4920FF26FBA65C0021EF19 /* Alert.swift in Sources */,
+				AFDDC4482704F005007CFA30 /* CategoryTableViewCellScreen.swift in Sources */,
+				AFDDC4452704EDC9007CFA30 /* CategoryTableViewCell.swift in Sources */,
 				AFDDC43E2703B3FB007CFA30 /* DataFood.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
