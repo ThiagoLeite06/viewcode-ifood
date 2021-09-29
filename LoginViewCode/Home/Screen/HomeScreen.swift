@@ -13,12 +13,13 @@ class HomeScreen: UIView {
         let tbv = UITableView()
         tbv.translatesAutoresizingMaskIntoConstraints = false
         tbv.backgroundColor = .white
-        
+        tbv.register(FoodDetailTableViewCell.self, forCellReuseIdentifier: FoodDetailTableViewCell.identifier)
         return tbv
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
         self.addSubView()
         self.setUpConstraints()
     }
