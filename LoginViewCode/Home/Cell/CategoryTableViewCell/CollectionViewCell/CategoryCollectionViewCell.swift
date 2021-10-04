@@ -20,11 +20,18 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         self.configConstraints()
     }
     
+    public func setUpCell(data: Category) {
+        self.categoryCollectionViewCellScreen.imageView.image = UIImage(named: data.nameImage)
+        self.categoryCollectionViewCellScreen.categoryName.text = data.name
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     func configAddSubView() {
+        self.categoryCollectionViewCellScreen.layer.borderWidth = 6.0
+        self.categoryCollectionViewCellScreen.layer.borderColor = UIColor.blue.cgColor
         self.categoryCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.categoryCollectionViewCellScreen)
     }

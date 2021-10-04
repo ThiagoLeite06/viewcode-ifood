@@ -9,13 +9,21 @@ import UIKit
 
 class CategoryCollectionViewCellScreen: UIView {
 
-    lazy var viewBackground: UIView = {
+    lazy var imageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
         
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
+        return image
+    }()
+    
+    lazy var categoryName: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textAlignment = .center
+        lbl.textColor = .darkGray
         
-        return view
+        return lbl
     }()
 
     override init(frame: CGRect) {
@@ -29,15 +37,21 @@ class CategoryCollectionViewCellScreen: UIView {
     }
     
     func configAddSubView() {
-        self.addSubview(self.viewBackground)
+        self.addSubview(self.imageView)
+        self.addSubview(self.categoryName)
     }
     
     func configConstraints() {
         NSLayoutConstraint.activate([
-            self.viewBackground.topAnchor.constraint(equalTo: self.topAnchor),
-            self.viewBackground.leftAnchor.constraint(equalTo: self.leftAnchor),
-            self.viewBackground.rightAnchor.constraint(equalTo: self.rightAnchor),
-            self.viewBackground.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            self.imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            self.imageView.bottomAnchor.constraint(equalTo: self.categoryName.topAnchor, constant:  -10),
+            
+            self.categoryName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            self.categoryName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            self.categoryName.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+            self.categoryName.heightAnchor.constraint(equalToConstant: 20),
             
         ])
     }

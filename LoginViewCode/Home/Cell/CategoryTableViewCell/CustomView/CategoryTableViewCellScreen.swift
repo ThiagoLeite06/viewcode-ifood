@@ -13,7 +13,7 @@ class CategoryTableViewCellScreen: UIView {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .none
         collectionView.delaysContentTouches = false
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier:    CategoryCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()

@@ -46,6 +46,7 @@ extension CategoryTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         
         let cell: CategoryCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell
         
+        cell?.setUpCell(data: Category(name: "Lanches", nameImage: "lanche-img"))
         return cell ?? UICollectionViewCell()
     }
     
