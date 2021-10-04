@@ -11,10 +11,15 @@ class HomeViewController: UIViewController  {
    
     
     var homeScreen: HomeScreen?
-    var data: [DataFood] = [
+    var dataFood: [DataFood] = [
         DataFood(name: "Hamburguer", nameImage: "hamburguer"),
         DataFood(name: "Massa", nameImage: "massa"),
           
+    ]
+    var dataCategory: [Category] = [
+        Category(name: "Doces", nameImage: "doces-img"),
+        Category(name: "Naturais", nameImage: "naturais-img"),
+        Category(name: "Saudável", nameImage: "saudavel-img"),  
     ]
     
     override func loadView() {
@@ -34,18 +39,19 @@ class HomeViewController: UIViewController  {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count + 1
+        return self.dataFood.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 2 {
             let cell: CategoryTableViewCell? = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell
+            cell?.dataCollection(data: self.dataCategory)
             return cell ?? UITableViewCell()
         }
         
         let cell: FoodDetailTableViewCell? = tableView.dequeueReusableCell(withIdentifier: FoodDetailTableViewCell.identifier, for: indexPath) as? FoodDetailTableViewCell
-        cell?.setUpCell(data: self.data[indexPath.row])
+        cell?.setUpCell(data: self.dataFood[indexPath.row])
         
         return cell ?? UITableViewCell()
     }

@@ -11,6 +11,8 @@ class CategoryTableViewCell: UITableViewCell {
     
     var categoryTableViewCellScreen: CategoryTableViewCellScreen = CategoryTableViewCellScreen()
     
+    var data: [Category] = []
+    
     static let identifier: String = "CategoryTableViewCell"
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -34,19 +36,23 @@ class CategoryTableViewCell: UITableViewCell {
         }
     }
     
+    public func dataCollection(data: [Category]) {
+        self.data = data
+    }
+    
 }
 
 extension CategoryTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: CategoryCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell
         
-        cell?.setUpCell(data: Category(name: "Lanches", nameImage: "lanche-img"))
+        cell?.setUpCell(data: self.data[indexPath.row])
         return cell ?? UICollectionViewCell()
     }
     
