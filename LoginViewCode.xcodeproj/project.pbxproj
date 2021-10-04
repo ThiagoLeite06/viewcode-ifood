@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF23F018270B442900A33634 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F017270B442800A33634 /* CategoryCollectionViewCell.swift */; };
 		AF23F01A270B447800A33634 /* CategoryCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F019270B447800A33634 /* CategoryCollectionViewCellScreen.swift */; };
+		AF23F01D270B6EB400A33634 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F01C270B6EB400A33634 /* Category.swift */; };
 		AF4920FF26FBA65C0021EF19 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4920FE26FBA65C0021EF19 /* Alert.swift */; };
 		AF7C5EFC26F3D3BF00A1AB81 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C5EFB26F3D3BF00A1AB81 /* RegisterViewController.swift */; };
 		AF7C5EFE26F3D4B500A1AB81 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C5EFD26F3D4B500A1AB81 /* RegisterScreen.swift */; };
@@ -35,6 +36,7 @@
 		94F59D98C4FA6E752D979546 /* Pods_LoginViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF23F017270B442800A33634 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF23F019270B447800A33634 /* CategoryCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		AF23F01C270B6EB400A33634 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AF4920FE26FBA65C0021EF19 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		AF7C5EFB26F3D3BF00A1AB81 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AF7C5EFD26F3D4B500A1AB81 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				AFDDC43D2703B3FB007CFA30 /* DataFood.swift */,
+				AF23F01C270B6EB400A33634 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				AFDDC43827036027007CFA30 /* HomeScreen.swift in Sources */,
 				AFDDC43B2703AEAE007CFA30 /* FoodDetailTableViewCell.swift in Sources */,
 				AFF465B626F0D1CA002C0C93 /* AppDelegate.swift in Sources */,
+				AF23F01D270B6EB400A33634 /* Category.swift in Sources */,
 				AFF465B826F0D1CA002C0C93 /* SceneDelegate.swift in Sources */,
 				AF4920FF26FBA65C0021EF19 /* Alert.swift in Sources */,
 				AFDDC4482704F005007CFA30 /* CategoryTableViewCellScreen.swift in Sources */,
