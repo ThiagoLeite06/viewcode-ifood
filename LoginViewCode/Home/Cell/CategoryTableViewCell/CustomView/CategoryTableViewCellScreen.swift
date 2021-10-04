@@ -15,7 +15,7 @@ class CategoryTableViewCellScreen: UIView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .red
         collectionView.delaysContentTouches = false
-        
+        collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier:    CategoryCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
         collectionView.setCollectionViewLayout(layout, animated: false)
@@ -28,6 +28,7 @@ class CategoryTableViewCellScreen: UIView {
         
         self.configSubView()
         self.configCollectionViewContraints()
+       
     }
     
     required init?(coder: NSCoder) {
@@ -36,6 +37,11 @@ class CategoryTableViewCellScreen: UIView {
     
     func configSubView() {
         self.addSubview(collectionView)
+    }
+    
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        self.collectionView.delegate = delegate
+        self.collectionView.dataSource = dataSource
     }
 
     func configCollectionViewContraints() {
