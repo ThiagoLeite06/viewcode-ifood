@@ -30,8 +30,8 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func configAddSubView() {
-        self.categoryCollectionViewCellScreen.layer.borderWidth = 6.0
-        self.categoryCollectionViewCellScreen.layer.borderColor = UIColor.blue.cgColor
+        self.categoryCollectionViewCellScreen.layer.borderWidth = 1.0
+        self.categoryCollectionViewCellScreen.layer.borderColor = UIColor.gray.cgColor
         self.categoryCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.categoryCollectionViewCellScreen)
     }
